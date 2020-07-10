@@ -1,7 +1,7 @@
 Escape sequence linting plugin for PYLS
-======================
+=======================================
 
-.. image:: https://badge.fury.io/py/esc-ls-ls.svg
+.. image:: https://badge.fury.io/py/esc-ls.svg
     :target: https://badge.fury.io/py/esc-ls
 
 .. image:: https://github.com/Richardk2n/esc-ls/workflows/Python%20package/badge.svg?branch=master
