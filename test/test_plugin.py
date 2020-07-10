@@ -31,7 +31,7 @@ def test_parse_line_UNKNOWN():
     assert len(diags) == 1
     assert diags[0]["source"] == "esc"
     assert diags[0]["message"] == ("The escape sequence '\\e' does not exist in python, "
-                                   "consider using '\\x1B' insted.")
+                                   "consider using '\\x1B' instead.")
     assert diags[0]["severity"] == 1
 
 

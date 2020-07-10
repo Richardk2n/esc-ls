@@ -57,7 +57,7 @@ def parse_line(line: str, lineNumber: int) -> List[Dict[str, Any]]:
             if secondaryGroup in unknownSequences:
                 severity = 1
                 message = (f"The escape sequence '{secondaryGroup}' does not exist in python, "
-                           f"consider using '{unknownSequences[secondaryGroup]}' insted.")
+                           f"consider using '{unknownSequences[secondaryGroup]}' instead.")
             diags.append({'source': 'esc',
                           'range': {
                               'start':
