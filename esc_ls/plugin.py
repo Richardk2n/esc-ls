@@ -60,8 +60,10 @@ def parse_line(line: str, lineNumber: int) -> List[Dict[str, Any]]:
                            f"consider using '{unknownSequences[secondaryGroup]}' insted.")
             diags.append({'source': 'esc',
                           'range': {
-                              'start': {'line': lineNumber, 'character': span[0]+secondarySpan[0]},
-                              'end': {'line': lineNumber, 'character': span[0]+secondarySpan[1]}
+                              'start':
+                                  {'line': lineNumber, 'character': span[0]+secondarySpan[0]+1},
+                              'end':
+                                  {'line': lineNumber, 'character': span[0]+secondarySpan[1]}
                               },
                           'message': message,
                           'severity': severity
