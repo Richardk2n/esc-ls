@@ -6,8 +6,6 @@ Created on Fri Jul 10 09:53:57 2020
 
 @author: Richard Kellnberger
 """
-import pytest
-
 from esc_ls import plugin
 
 TEST_LINE_NOTHING = 'Not str literal in this line'
