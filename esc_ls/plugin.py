@@ -139,6 +139,8 @@ def init(workspace: str) -> Dict[str, str]:
         The plugin config dict.
 
     """
+    # On windows the path contains \\ on linux it contains / all the code works with /
+    workspace = workspace.replace("\\", "/")
     configuration = {}
     path = findConfigFile(workspace, "esc-ls.cfg")
     if path:
@@ -168,11 +170,11 @@ def findConfigFile(path: str, name: str) -> Optional[str]:
 
     """
     while True:
-        p = f"{path}\\{name}"
+        p = f"{path}/{name}"
         if os.path.isfile(p):
             return p
         else:
-            loc = path.rfind("\\")
+            loc = path.rfind("/")
             if loc == -1:
                 return None
             path = path[:loc]
